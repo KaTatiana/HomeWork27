@@ -40,6 +40,24 @@ public class Main {
         employeeBook.indexingSalary(2,0.5d);
         employeeBook.employeesMinSalary(60000.0);
         employeeBook.employeesMaxSalary(60000.0);
+        System.out.println(
+            employeeBook.addEmployees("Галкин Алексей Иванович",
+                        "Галкин",
+                        "Алексей",
+                        "Иванович",
+                        2,
+                        75000));
+        System.out.println(
+            employeeBook.addEmployees("Леонов Петр Иванович",
+                        "Петр",
+                        "Иванович",
+                        "Леонов",
+                        5,
+                        77000));
+        System.out.println(
+                employeeBook.deleteEmployees("Галкин Алексей Иванович")
+        );
+        System.out.println(employeeBook.searchEmployees("Леонов Петр Иванович"));
     }
 }
 

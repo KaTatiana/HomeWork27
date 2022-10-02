@@ -15,7 +15,7 @@ public class Employee {
     private final int department;
     private double salary;
 
-    public Employee(String name, String patronymic,  String surname, int department, int salary) {
+    public Employee(String name, String patronymic,  String surname, int department, double salary) {
         this.name = name;
         this.patronymic=patronymic;
         this.surname = surname;

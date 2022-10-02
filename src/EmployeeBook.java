@@ -70,6 +70,26 @@ public class EmployeeBook {
                 5,
                 77000)
         ));
+    public String addEmployees(String key, String name, String patronymic, String surname, int department, double salary){
+        if (employees.containsKey(key)) {
+            return "Сотрудник "+key+ " уже существует!";
+        }
+        employees.put(key, new Employee(
+                name,
+                patronymic,
+                surname,
+                department,
+                salary)
+        );
+        return "Сотрудник "+key+" добавлен";
+    }
+    public String searchEmployees(String name) {
+        return  employees.get(name).toString(); //ищет значение по его ключу;
+    }
+    public String deleteEmployees(String name) {
+        employees.remove(name); //удаляет значение по его ключу;
+        return "Сотрудник "+name+" успешно удален";
+    }
     public void employeesFullPrint(){
         for (String key: employees.keySet()){
             String value = employees.get(key).toString();
